@@ -81,9 +81,9 @@ if (!animate) {
 	//       elapsed seconds. You can also add the seconds to the number of elapsed
 	//       minutes, and so on.
 	function drawClock(time) {
-		let ms = time.milliseconds();
-		let sec = time.seconds() + ms / 1000;
-		let min = time.minutes() + sec / 60;
+		let ms = time.millisecond();
+		let sec = time.second() + ms / 1000;
+		let min = time.minute() + sec / 60;
 		let hr = 5 * (time.hour() % 12) + min / 60;
 
 		brush.strokeStyle = "black";

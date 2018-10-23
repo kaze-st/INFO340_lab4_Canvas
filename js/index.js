@@ -32,20 +32,22 @@ brush.lineWidth = 2;
 
 
 //hour hand
-
+brush.lineWidth = 20;
 
 //minute hand
-
+brush.lineWidth = 15;
 
 //second hand
+brush.strokeStyle = "red";
+
 
 
 
 /* ABOVE AND BEYOND*/
 
 /**  Comment out your previous work. In here, you will animate the clock. You will have to implement the drawClock function
- * that has time (a moment() object) as an argument and you will have to draw the clock displaying that
- * time. You should copy paste a lot of the stuff frim your previous work to save you some time.
+ * that has time (a moment object- https://momentjs.com/docs/) as an argument and you will have to draw the clock displaying that
+ * time. You should copy paste a lot of the stuff from your previous work to save you some time.
 */
 
 //     To help you out, I have provided a function `strokeLineAtMinutes()` that
@@ -56,6 +58,8 @@ brush.lineWidth = 2;
 //     - You should also add the milliseconds (in thousandths) to the number of
 //       elapsed seconds. You can also add the seconds to the number of elapsed
 //       minutes, and so on.
+//	   - To get milliseconds, seconds, minutes and hours, the time parameter will have 
+//		fields of time.millisecond, time.second, time.minute, time.hour
 
 function drawClock(time) {
 
@@ -75,7 +79,7 @@ function strokeLineAtMinutes(minutes, startX, startY, length) {
 
 	//Use the `window.setInterval()` function so that it draws the clock for the 
 	//current time every 16 milliseconds. You should use an anonymous callback
-	//function which can access and pass in the current time to the `drawClock()` call.
+	//function which can access and pass in the current time (by passing in `moment()`) to the `drawClock()` call.
 	//Your anonymous function can also `clearRect()` the canvas of the last drawing.
 	//You do not need to stop the clock ticking.
 

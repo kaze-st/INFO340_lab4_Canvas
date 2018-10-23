@@ -4,8 +4,9 @@
 const canvas = document.getElementById("canvas"); //reference the canvas element
 const brush = canvas.getContext("2d"); //the drawing context
 
-/* Width of your brush */
+/* Width and colour of your brush */
 brush.lineWidth = 10;
+brush.strokeStyle = "yellow";
 
 /** Draw a line */
 brush.moveTo(0, 0);
@@ -29,11 +30,12 @@ brush.fillStyle = "green"
 brush.fillRect(200, 200, 100, 40);
 
 /** Clear stuff up */
-brush.clearRect()
+brush.clearRect(0, 0, 500, 500);
+
+/** Animate */
 
 let i = 20;
-setInterval(() => {
-	brush.clearRect(0, 0, 700, 800);
+setInterval(function() {
 	brush.moveTo(0,0);
 	brush.lineTo(i, i);
 	brush.stroke();
